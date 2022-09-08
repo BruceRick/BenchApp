@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Timeline: Decodable {
+struct Timeline: Decodable, Equatable {
   let games: [Game]
 }

@@ -10,3 +10,7 @@ import Foundation
 protocol API {
   static func request<T: Decodable>(endpoint: Endpoint) async throws -> (data: T, response: URLResponse)
 }
+
+enum APIError: Error {
+  case invalidURL
+}

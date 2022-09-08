@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct MainView: View {
+  let api: API.Type
   var body: some View {
-    MainNavigationView()
+    MainNavigationView(api: api)
   }
 }
 
 struct MainView_Previews: PreviewProvider {
   static var previews: some View {
-    MainView()
+    MainView(api: MockAPI.self)
   }
 }

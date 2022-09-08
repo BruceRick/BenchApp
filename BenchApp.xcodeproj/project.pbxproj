@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB1FBC9D28C95F9900295CBC /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1FBC9C28C95F9900295CBC /* Formatters.swift */; };
 		CB8516AA28BEED5A003CA627 /* BenchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8516A928BEED5A003CA627 /* BenchApp.swift */; };
 		CB8516AC28BEED5A003CA627 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8516AB28BEED5A003CA627 /* MainView.swift */; };
 		CB8516AE28BEED5F003CA627 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB8516AD28BEED5F003CA627 /* Assets.xcassets */; };
@@ -23,6 +24,8 @@
 		CB8516E728BEF238003CA627 /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8516E628BEF238003CA627 /* MockAPI.swift */; };
 		CB8516E928BEF4F5003CA627 /* MainNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8516E828BEF4F5003CA627 /* MainNavigationView.swift */; };
 		CB8516EB28BEFBC8003CA627 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8516EA28BEFBC8003CA627 /* TimelineView.swift */; };
+		CB8516F028BF016D003CA627 /* TimelineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8516EF28BF016D003CA627 /* TimelineViewModel.swift */; };
+		CB8516F528BF142A003CA627 /* TimelineGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8516F428BF142A003CA627 /* TimelineGameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB1FBC9C28C95F9900295CBC /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		CB8516A628BEED5A003CA627 /* BenchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BenchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8516A928BEED5A003CA627 /* BenchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchApp.swift; sourceTree = "<group>"; };
 		CB8516AB28BEED5A003CA627 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 		CB8516E628BEF238003CA627 /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
 		CB8516E828BEF4F5003CA627 /* MainNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationView.swift; sourceTree = "<group>"; };
 		CB8516EA28BEFBC8003CA627 /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
+		CB8516EF28BF016D003CA627 /* TimelineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewModel.swift; sourceTree = "<group>"; };
+		CB8516F428BF142A003CA627 /* TimelineGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineGameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB1FBC9B28C95F4900295CBC /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				CB1FBC9C28C95F9900295CBC /* Formatters.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
 		CB85169D28BEED5A003CA627 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +163,7 @@
 		CB8516D628BEEE84003CA627 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				CB1FBC9B28C95F4900295CBC /* Logic */,
 				CB8516D728BEEE8F003CA627 /* Network */,
 				CB8516D828BEEE97003CA627 /* Views */,
 			);
@@ -171,7 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				CB8516E828BEF4F5003CA627 /* MainNavigationView.swift */,
-				CB8516EA28BEFBC8003CA627 /* TimelineView.swift */,
+				CB8516EC28BF0126003CA627 /* Timeline */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -199,6 +214,16 @@
 				CB8516DE28BEEFCE003CA627 /* LiveAPI.swift */,
 			);
 			path = Live;
+			sourceTree = "<group>";
+		};
+		CB8516EC28BF0126003CA627 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				CB8516EF28BF016D003CA627 /* TimelineViewModel.swift */,
+				CB8516EA28BEFBC8003CA627 /* TimelineView.swift */,
+				CB8516F428BF142A003CA627 /* TimelineGameView.swift */,
+			);
+			path = Timeline;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,11 +363,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB8516E328BEF1B3003CA627 /* Timeline.swift in Sources */,
+				CB1FBC9D28C95F9900295CBC /* Formatters.swift in Sources */,
+				CB8516F028BF016D003CA627 /* TimelineViewModel.swift in Sources */,
 				CB8516E928BEF4F5003CA627 /* MainNavigationView.swift in Sources */,
 				CB8516AC28BEED5A003CA627 /* MainView.swift in Sources */,
 				CB8516E528BEF20A003CA627 /* Game.swift in Sources */,
 				CB8516DA28BEEEA3003CA627 /* API.swift in Sources */,
 				CB8516E728BEF238003CA627 /* MockAPI.swift in Sources */,
+				CB8516F528BF142A003CA627 /* TimelineGameView.swift in Sources */,
 				CB8516DC28BEEEFC003CA627 /* Endpoint.swift in Sources */,
 				CB8516DF28BEEFCE003CA627 /* LiveAPI.swift in Sources */,
 				CB8516EB28BEFBC8003CA627 /* TimelineView.swift in Sources */,

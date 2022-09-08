@@ -15,12 +15,8 @@ struct LiveAPI: API {
     return decoder
   }()
   
-  enum APIError: Error {
-    case invalidURL
-  }
-  
   static func request<T>(endpoint: Endpoint) async throws -> (data: T, response: URLResponse) where T : Decodable {
-    guard let url = URL(string: Self.baseURLString.appending(endpoint.path)) else {
+    guard let url = URL(string: Self.baseURLString + endpoint.path) else {
       throw APIError.invalidURL
     }
     

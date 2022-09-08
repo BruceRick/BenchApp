@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Game: Decodable {
+struct Game: Decodable, Equatable {
+  let id: Int
   let sport: String
   let location: String
   let address: String

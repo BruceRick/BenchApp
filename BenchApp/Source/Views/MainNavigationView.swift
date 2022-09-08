@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 struct MainNavigationView: View {
+  let api: API.Type
   
   enum Tab: String, CaseIterable, Identifiable {
     case Home
@@ -36,35 +38,29 @@ struct MainNavigationView: View {
       case .Notifications: return "bell.fill"
       }
     }
-    
-    @ViewBuilder
-    var view: some View {
-      switch self {
-      default:
-        TimelineView()
-      }
-    }
   }
   
   var body: some View {
     NavigationView {
       TabView {
         ForEach(Tab.allCases) { tab in
-          tab.view
+          TimelineView(store: Store(
+            initialState: .init(),
+            reducer: TimelineView.reducer,
+            environment: .init(api: api))
+          )
             .navigationTitle(tab.rawValue)
             .tabItem {
               Label(tab.rawValue, systemImage: tab.iconName)
             }
         }
-      }
-      .navigationBarTitleDisplayMode(.inline)
+      }.navigationViewStyle(StackNavigationViewStyle())
     }
-    .navigationViewStyle(StackNavigationViewStyle())
   }
 }
 
 struct MainNavigationView_Previews: PreviewProvider {
   static var previews: some View {
-    MainNavigationView()
+    MainNavigationView(api: MockAPI.self)
   }
 }
