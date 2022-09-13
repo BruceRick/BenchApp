@@ -41,20 +41,36 @@ struct MainNavigationView: View {
   }
   
   var body: some View {
-    NavigationView {
-      TabView {
-        ForEach(Tab.allCases) { tab in
-          TimelineView(store: Store(
-            initialState: .init(),
-            reducer: TimelineView.reducer,
-            environment: .init(api: api))
-          )
-            .navigationTitle(tab.rawValue)
-            .tabItem {
-              Label(tab.rawValue, systemImage: tab.iconName)
-            }
+    TabView {
+      ForEach(Tab.allCases) { tab in
+        view(tab: tab)
+          .tabItem {
+            Label(tab.rawValue, systemImage: tab.iconName)
+          }
+      }
+    }
+  }
+  
+  @ViewBuilder
+  func view(tab: Tab) -> some View {
+    switch tab {
+    case .Home:
+      TimelineView(store: Store(
+        initialState: .init(sync: .init()),
+        reducer: TimelineView.reducer,
+        environment: .init(api: api))
+      )
+    default:
+      NavigationView {
+        VStack(spacing: 0) {
+          Spacer()
+          Text(tab.rawValue)
+          Spacer()
         }
-      }.navigationViewStyle(StackNavigationViewStyle())
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .navigationTitle(tab.rawValue)
+      }
+      .navigationViewStyle(StackNavigationViewStyle())
     }
   }
 }

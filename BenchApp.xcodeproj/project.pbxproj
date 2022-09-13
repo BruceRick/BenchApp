@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		CB1FBC9D28C95F9900295CBC /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1FBC9C28C95F9900295CBC /* Formatters.swift */; };
+		CB1FBCA228D0174000295CBC /* SyncHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1FBCA128D0174000295CBC /* SyncHeaderViewModel.swift */; };
+		CB1FBCA428D0175700295CBC /* SyncHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1FBCA328D0175700295CBC /* SyncHeaderView.swift */; };
+		CB1FBCA728D0371800295CBC /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1FBCA628D0371800295CBC /* ScheduleView.swift */; };
 		CB8516AA28BEED5A003CA627 /* BenchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8516A928BEED5A003CA627 /* BenchApp.swift */; };
 		CB8516AC28BEED5A003CA627 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8516AB28BEED5A003CA627 /* MainView.swift */; };
 		CB8516AE28BEED5F003CA627 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB8516AD28BEED5F003CA627 /* Assets.xcassets */; };
@@ -47,6 +50,9 @@
 
 /* Begin PBXFileReference section */
 		CB1FBC9C28C95F9900295CBC /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		CB1FBCA128D0174000295CBC /* SyncHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncHeaderViewModel.swift; sourceTree = "<group>"; };
+		CB1FBCA328D0175700295CBC /* SyncHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncHeaderView.swift; sourceTree = "<group>"; };
+		CB1FBCA628D0371800295CBC /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		CB8516A628BEED5A003CA627 /* BenchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BenchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8516A928BEED5A003CA627 /* BenchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchApp.swift; sourceTree = "<group>"; };
 		CB8516AB28BEED5A003CA627 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -101,6 +107,23 @@
 				CB1FBC9C28C95F9900295CBC /* Formatters.swift */,
 			);
 			path = Logic;
+			sourceTree = "<group>";
+		};
+		CB1FBCA028D0171B00295CBC /* SyncHeader */ = {
+			isa = PBXGroup;
+			children = (
+				CB1FBCA128D0174000295CBC /* SyncHeaderViewModel.swift */,
+				CB1FBCA328D0175700295CBC /* SyncHeaderView.swift */,
+			);
+			path = SyncHeader;
+			sourceTree = "<group>";
+		};
+		CB1FBCA528D036D900295CBC /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				CB1FBCA628D0371800295CBC /* ScheduleView.swift */,
+			);
+			path = Schedule;
 			sourceTree = "<group>";
 		};
 		CB85169D28BEED5A003CA627 = {
@@ -186,7 +209,9 @@
 			isa = PBXGroup;
 			children = (
 				CB8516E828BEF4F5003CA627 /* MainNavigationView.swift */,
+				CB1FBCA028D0171B00295CBC /* SyncHeader */,
 				CB8516EC28BF0126003CA627 /* Timeline */,
+				CB1FBCA528D036D900295CBC /* Schedule */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -367,12 +392,15 @@
 				CB8516F028BF016D003CA627 /* TimelineViewModel.swift in Sources */,
 				CB8516E928BEF4F5003CA627 /* MainNavigationView.swift in Sources */,
 				CB8516AC28BEED5A003CA627 /* MainView.swift in Sources */,
+				CB1FBCA728D0371800295CBC /* ScheduleView.swift in Sources */,
 				CB8516E528BEF20A003CA627 /* Game.swift in Sources */,
+				CB1FBCA228D0174000295CBC /* SyncHeaderViewModel.swift in Sources */,
 				CB8516DA28BEEEA3003CA627 /* API.swift in Sources */,
 				CB8516E728BEF238003CA627 /* MockAPI.swift in Sources */,
 				CB8516F528BF142A003CA627 /* TimelineGameView.swift in Sources */,
 				CB8516DC28BEEEFC003CA627 /* Endpoint.swift in Sources */,
 				CB8516DF28BEEFCE003CA627 /* LiveAPI.swift in Sources */,
+				CB1FBCA428D0175700295CBC /* SyncHeaderView.swift in Sources */,
 				CB8516EB28BEFBC8003CA627 /* TimelineView.swift in Sources */,
 				CB8516AA28BEED5A003CA627 /* BenchApp.swift in Sources */,
 			);

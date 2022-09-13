@@ -11,6 +11,14 @@ struct MainView: View {
   let api: API.Type
   var body: some View {
     MainNavigationView(api: api)
+      .onAppear {
+        let tabBarAppearance = UITabBarAppearance()
+        tabBarAppearance.configureWithOpaqueBackground()
+        UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+        let navigationBarAppearance = UINavigationBarAppearance()
+        navigationBarAppearance.configureWithOpaqueBackground()
+        UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+      }
   }
 }
 

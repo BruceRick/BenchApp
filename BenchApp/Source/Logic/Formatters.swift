@@ -10,7 +10,7 @@ import Foundation
 extension DateFormatter {
   static let gameTime: DateFormatter = {
     let formatter = DateFormatter()
-    formatter.dateFormat = "h:mm a"
+    formatter.dateFormat = "h:mma"
     formatter.locale = .current
     return formatter
   }()
